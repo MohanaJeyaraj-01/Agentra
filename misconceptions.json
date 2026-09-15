@@ -1,0 +1,32 @@
+[
+  {
+    "id": "M1",
+    "name": "append_vs_extend",
+    "description": "Student confuses append() with extend(). append(x) adds x as one element; extend(iterable) adds its elements.",
+    "strategies": [
+      "analogy",
+      "code_comparison",
+      "step_by_step_trace"
+    ]
+  },
+  {
+    "id": "M2",
+    "name": "index_vs_value",
+    "description": "Student confuses a list element's index/position with the value stored at that position.",
+    "strategies": [
+      "position_analogy",
+      "indexed_diagram",
+      "code_trace"
+    ]
+  },
+  {
+    "id": "M3",
+    "name": "slice_boundaries",
+    "description": "Student misunderstands Python slicing: start is included and stop is excluded.",
+    "strategies": [
+      "range_visualization",
+      "index_diagram",
+      "step_by_step_trace"
+    ]
+  }
+]
