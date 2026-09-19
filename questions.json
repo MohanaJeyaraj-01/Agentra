@@ -3,84 +3,44 @@
     "id": "Q1",
     "misconception": "M1",
     "difficulty": "easy",
-    "question": "What is the output?\na = [1, 2]\na.append(3)\nprint(a)",
+    "question": "What is the output?\nitems = [1, 2]\nitems.append(3)\nprint(items)",
     "options": [],
     "correct_answer": "[1, 2, 3]"
   },
   {
     "id": "Q2",
-    "misconception": "M1",
+    "misconception": "M2",
     "difficulty": "easy",
-    "question": "What is the output?\na = [1, 2]\na.append([3, 4])\nprint(a)",
+    "question": "What is the value of colors[0]?\ncolors = ['red', 'blue', 'green']",
     "options": [],
-    "correct_answer": "[1, 2, [3, 4]]"
+    "correct_answer": "red"
   },
   {
     "id": "Q3",
-    "misconception": "M1",
-    "difficulty": "medium",
-    "question": "What is the output?\na = [1, 2]\na.extend([3, 4])\nprint(a)",
+    "misconception": "M3",
+    "difficulty": "easy",
+    "question": "What is the output?\nnumbers = [10, 20, 30, 40]\nprint(numbers[:2])",
     "options": [],
-    "correct_answer": "[1, 2, 3, 4]"
+    "correct_answer": "[10, 20]"
   },
   {
     "id": "Q4",
     "misconception": "M1",
-    "difficulty": "medium",
-    "question": "What is the output?\na = ['A']\na.append(['B', 'C'])\nprint(a)",
+    "difficulty": "easy",
+    "question": "What is the output?\nletters = ['a']\nletters.append(['b', 'c'])\nprint(letters)",
     "options": [],
-    "correct_answer": "['A', ['B', 'C']]"
+    "correct_answer": "['a', ['b', 'c']]"
   },
   {
     "id": "Q5",
     "misconception": "M2",
     "difficulty": "easy",
-    "question": "What is the value of fruits[1]?\nfruits = ['apple', 'banana', 'mango']",
+    "question": "What is stored at index 2?\nnumbers = [5, 10, 15, 20]",
     "options": [],
-    "correct_answer": "banana"
+    "correct_answer": "15"
   },
   {
     "id": "Q6",
-    "misconception": "M2",
-    "difficulty": "easy",
-    "question": "What value is stored at index 2?\nnumbers = [10, 20, 30]",
-    "options": [],
-    "correct_answer": "30"
-  },
-  {
-    "id": "Q7",
-    "misconception": "M2",
-    "difficulty": "medium",
-    "question": "What is the output?\nnumbers = [10, 20, 30]\nnumbers[1] = 99\nprint(numbers)",
-    "options": [],
-    "correct_answer": "[10, 99, 30]"
-  },
-  {
-    "id": "Q8",
-    "misconception": "M2",
-    "difficulty": "medium",
-    "question": "In this code, what does i represent?\nfor i in range(len(numbers)):\n    print(numbers[i])",
-    "options": [],
-    "correct_answer": "the index/position"
-  },
-  {
-    "id": "Q9",
-    "misconception": "M3",
-    "difficulty": "easy",
-    "question": "What is the output?\nnumbers = [10, 20, 30, 40, 50]\nprint(numbers[1:4])",
-    "options": [],
-    "correct_answer": "[20, 30, 40]"
-  },
-  {
-    "id": "Q10",
-    "misconception": "M3",
-    "difficulty": "medium",
-    "question": "What is the output?\nnumbers = [10, 20, 30, 40, 50]\nprint(numbers[2:4])",
-    "options": [],
-    "correct_answer": "[30, 40]"
-  },
-  {
-    "id": "Q11",
     "misconception": "M3",
     "difficulty": "easy",
     "question": "What is the output?\nletters = ['a', 'b', 'c', 'd']\nprint(letters[1:3])",
@@ -88,11 +48,51 @@
     "correct_answer": "['b', 'c']"
   },
   {
+    "id": "Q7",
+    "misconception": "M1",
+    "difficulty": "medium",
+    "question": "What is the output?\na = [1, 2]\na.extend([3, 4])\nprint(a)",
+    "options": [],
+    "correct_answer": "[1, 2, 3, 4]"
+  },
+  {
+    "id": "Q8",
+    "misconception": "M2",
+    "difficulty": "medium",
+    "question": "What is the output?\nnumbers = [10, 20, 30]\nprint(numbers[1])",
+    "options": [],
+    "correct_answer": "20"
+  },
+  {
+    "id": "Q9",
+    "misconception": "M3",
+    "difficulty": "medium",
+    "question": "What is the output?\nnumbers = [10, 20, 30, 40, 50]\nprint(numbers[2:5])",
+    "options": [],
+    "correct_answer": "[30, 40, 50]"
+  },
+  {
+    "id": "Q10",
+    "misconception": "M1",
+    "difficulty": "medium",
+    "question": "What is the output?\na = [1, 2]\na.append([3, 4])\na.extend([5, 6])\nprint(a)",
+    "options": [],
+    "correct_answer": "[1, 2, [3, 4], 5, 6]"
+  },
+  {
+    "id": "Q11",
+    "misconception": "M2",
+    "difficulty": "medium",
+    "question": "In this loop, what does i represent?\nfruits = ['apple', 'banana', 'mango']\nfor i in range(len(fruits)):\n    print(fruits[i])",
+    "options": [],
+    "correct_answer": "the index/position"
+  },
+  {
     "id": "Q12",
     "misconception": "M3",
-    "difficulty": "easy",
-    "question": "What is the output?\nnumbers = [1, 2, 3, 4]\nprint(numbers[:3])",
+    "difficulty": "medium",
+    "question": "What is the output?\nnumbers = [1, 2, 3, 4, 5]\nprint(numbers[1:4])",
     "options": [],
-    "correct_answer": "[1, 2, 3]"
+    "correct_answer": "[2, 3, 4]"
   }
 ]
