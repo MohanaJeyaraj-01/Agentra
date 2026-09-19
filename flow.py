@@ -86,8 +86,6 @@ class TutorFlow:
 
             elif event == "continue":
                 if self.misconception in VALID_MISCONCEPTIONS:
-                    self.remediation_attempts = 0
-                    self.used_strategies = []
                     self.state = State.TEACH
                 else:
                     self.retry_original_question = True
