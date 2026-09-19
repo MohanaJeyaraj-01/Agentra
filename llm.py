@@ -2,10 +2,7 @@ import json
 import os
 import urllib.request
 import urllib.error
-
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
-
-
 def call_llm(system_prompt, user_prompt, model=None):
     api_key = os.getenv("OPENROUTER_API_KEY")
     if not api_key:
