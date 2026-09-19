@@ -1,6 +1,4 @@
 from flow import TutorFlow, State
-
-
 def main():
     flow = TutorFlow()
 
@@ -35,7 +33,6 @@ def main():
     flow.move()
 
     print("FINISHED")
-
 
 if __name__ == "__main__":
     main()
