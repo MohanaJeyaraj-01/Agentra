@@ -1,11 +1,7 @@
 from pathlib import Path
 import json
-
 from llm import call_llm, parse_json
-
 PROMPT_DIR = Path("prompts")
-
-
 def read_prompt(name):
     return (PROMPT_DIR / name).read_text(encoding="utf-8")
 
