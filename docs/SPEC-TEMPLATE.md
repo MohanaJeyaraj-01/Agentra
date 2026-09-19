@@ -18,7 +18,7 @@
 
 A student answers a Python list question incorrectly because they believe `append([3,4])` adds `3` and `4` separately. A normal quiz can mark the answer wrong and show the correct output, but it does not establish whether the student has understood the misconception. If the student fails another question for the same reason, the system should recognize the repeated misconception, try a different explanation, and stop for a mentor rather than repeating indefinitely.
 
-## 3. What you are building
+## 3. What we are building
 
 **Input:** A Python question, the student's answer, and the supported misconception set for the current slice.
 
@@ -293,7 +293,7 @@ The core state machine can support additional misconception/question records wit
 
 A larger deployment would eventually need stronger storage/concurrency handling than the current per-student JSON file.
 
-## 15. What you are least sure about
+## 15. What we are least sure about
 
 1. **Diagnosis reliability:** Whether the model consistently distinguishes similar student mistakes and assigns the correct supported misconception.
 2. **Re-quiz validity:** Whether one successful re-quiz is enough evidence that the misconception is actually resolved rather than temporarily answered correctly.
