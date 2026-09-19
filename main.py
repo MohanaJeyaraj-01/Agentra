@@ -1,22 +1,15 @@
 import json
 from pathlib import Path
-
 from flow import TutorFlow, State
 from agents import diagnose, teach, evaluate
 from store import load_state, save_state, record, update_misconception
-
-
 QUESTIONS = json.loads(
     Path("questions.json").read_text(encoding="utf-8")
 )
-
 MISCONCEPTIONS = json.loads(
     Path("misconceptions.json").read_text(encoding="utf-8")
 )
-
 VALID_MISCONCEPTIONS = {"M1", "M2", "M3"}
-
-
 def get_question(question_id):
     return next(q for q in QUESTIONS if q["id"] == question_id)
 
