@@ -14,7 +14,11 @@ MISCONCEPTIONS = json.loads(
     Path("misconceptions.json").read_text(encoding="utf-8")
 )
 
-VALID_MISCONCEPTIONS = {"M1", "M2", "M3"}
+VALID_MISCONCEPTIONS = MISCONCEPTION_NAMES = {
+    "M1": "append() vs extend()",
+    "M2": "Index vs value",
+    "M3": "Slice boundaries"
+}
 
 
 def get_question(question_id):
@@ -154,11 +158,43 @@ def mentor_review(state, misconception):
     return decision
 
 
+def show_returning_student_history(state):
+    misconceptions = state.get("misconceptions", {})
+
+    if not misconceptions:
+        return
+
+    print("\n========================================")
+    print(f"        WELCOME BACK, {state['student_id']}")
+    print("========================================")
+    print("\nYOUR LEARNING HISTORY")
+
+    for misconception_id, info in misconceptions.items():
+        name = MISCONCEPTION_NAMES.get(
+    misconception_id,
+    "Unknown misconception"
+)
+
+        print(f"\n• Misconception: {misconception_id} — {name}")
+        print(f"  Status: {info.get('status', 'unknown')}")
+        print(f"  Attempts: {info.get('attempts', 0)}")
+
+        strategies = info.get("strategies_used", [])
+
+        if strategies:
+            print("  Strategies tried:")
+            for i, strategy in enumerate(strategies, 1):
+                print(f"    {i}. {strategy}")
+
+    print("\nLet's continue from where you left off.")
+    print("========================================")
+
 def run(
     student_id="student_001",
     first_question_id="Q9"
 ):
     state = load_state(student_id)
+    show_returning_student_history(state)
 
     flow = TutorFlow()
 
