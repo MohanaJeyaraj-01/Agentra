@@ -746,13 +746,25 @@ def run(
     )
 
 
-if __name__ == "__main__":
-
+if _name_ == "_main_":
     student = input(
         "Student ID [student_001]: "
     ).strip() or "student_001"
 
-    run(
-        student_id=student,
-        first_question_id="Q9"
-    )
+    try:
+        run(
+            student_id=student,
+            first_question_id="Q9"
+        )
+
+    except RuntimeError as e:
+        print("\n========================================")
+        print(" AGENT ERROR")
+        print("========================================")
+        print(str(e))
+        print()
+        print("Your student state has been preserved.")
+        print("========================================")
+
+    except KeyboardInterrupt:
+        print("\n\nSession stopped by user.")
